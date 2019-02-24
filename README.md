@@ -1,5 +1,5 @@
 # Non-Deterministic-Turing-Machin-Simulator
-Project for "Algorithm and Principles of Computer Science" course of Politecnico di Milano.
+Project for "Algorithm and Principles of Computer Science" course of Politecnico di Milano, written in C.
 
 Specifica:
 • Implementazione in linguaggio C standard (con la sola libc) di un interprete
