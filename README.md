@@ -1,42 +1,44 @@
 # Non-Deterministic-Turing-Machin-Simulator
+
 Project for "Algorithm and Principles of Computer Science" course of Politecnico di Milano.
 
 **The main focus of the entire project is on complex data structures**
 
-Specifica:
-• Implementazione in linguaggio C standard (con la sola libc) di un interprete
-di Macchine di Turing non-deterministiche, nella variante a nastro singolo e
-solo accettori.
-• Struttura del file di ingresso: prima viene fornita la funzione di transizione,
-quindi gli stati di accettazione e un limite massimo sul numero di passi da
-effettuare per una singola computazione (per evitare in maniera banale il
-problema delle macchine che non terminano), infine una serie di stringhe
-da far leggere alla macchina.
-• In uscita ci si attende un file contenente 0 per le stringhe non accettate e 1
-per quelle accettate; essendoci anche un limite sul numero di passi, il
-risultato può anche essere U se non si è arrivati ad accettazione.
-• Per semplicità i simboli di nastro sono dei char, mentre gli stati sono
-int. Il carattere "_" indica il simbolo "blank".
-• La macchina parte sempre dallo stato 0 e dal primo carattere della
-stringa in ingresso.
-• Si assume, come al solito, che il nastro sia illimitato sia a sinistra che a
-destra e che contenga in ogni posizione il carattere "_".
-• I caratteri "L", "R", "S" vengono usati, come al solito, per il movimento
-della testina.
-• Il file di ingresso viene fornito tramite lo standard input, mentre
-quello in uscita è sullo standard output.
+## Specific
+
+- **Standard C language** implementation (with **libc only**) of an interpreter
+of non-deterministic Turing machines, in the single-ribbon variant and
+acceptors only.
+- **Input file** structure: transition function is provided first,
+then the acceptance states and a maximum limit on the number of steps to
+perform for a single computation (to banally avoid the
+problem of non-terminating machines), finally a series of strings
+to be read by the machine.
+- On exit, a file is expected containing 0 for unaccepted strings and 1
+for those accepted; as there is also a limit on the number of steps, the
+result can also be U if acceptance has not been reached.
+- For simplicity, the ribbon symbols are chars, while the states are
+int. The "_" character indicates the "blank" symbol.
+- The machine always starts from state 0 and from the first character of the
+input string.
+- It is assumed, as usual, that the tape is unlimited on both left and a
+right and that contains the character "_" in each position.
+- The characters "L", "R", "S" are used, as usual, for the movement
+head.
+- The input file is provided via the standard input, while
+the output is on standard output.
 
 Il file di ingresso è diviso in 4 parti:
-• La prima parte, che inizia con "tr", contiene le transizioni, una per linea -
+- La prima parte, che inizia con "tr", contiene le transizioni, una per linea -
 ogni carattere può essere separato dagli altri da spazi.
 Per es. 0 a c R 1 significa che si va dallo stato 0 allo stato 1, leggendo a e
 scrivendo c; la testina viene spostata a destra (R).
-• La parte successiva, che inizia con "acc", elenca gli stati di accettazione, uno
+- La parte successiva, che inizia con "acc", elenca gli stati di accettazione, uno
 per linea.
-• Per evitare problemi di computazioni infinite, nella sezione successiva, che
+- Per evitare problemi di computazioni infinite, nella sezione successiva, che
 inizia con "max", viene indicato il numero di mosse massimo che si possono
 fare per accettare una stringa.
-• La parte finale, che inizia con "run", è un elenco di stringhe da fornire alla
+- La parte finale, che inizia con "run", è un elenco di stringhe da fornire alla
 macchina, una per linea.
 
 es. (MT non-det. per WW^(R) )
@@ -75,13 +77,8 @@ aababbabbaaababbabaabbaababbabaaaababbabaa
 U
 0
 
-
-
-
-Input
-Gli input vengono forniti da stdin.
-Si assuma che la sequenza dei comandi di input sia sintatticamente corretta.
-Il formato è il seguente
+## Input
+Il formato dell'input è il seguente
 ● tr
 ● funzione di transizione
 ● acc
