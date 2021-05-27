@@ -1,4 +1,4 @@
-# Non Deterministic Turing Machin Simulator
+# Non Deterministic Turing Machine Simulator
 
 Project for "Algorithm and Principles of Computer Science" course of Politecnico di Milano.
 
